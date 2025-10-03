@@ -1,0 +1,6 @@
+remotes:
+  - git_url: "https://github.com/nyarthan/lefthook-config"
+    configs:
+      - "configs/dprint-json.yml"
+      - "configs/dprint-markdown.yml"
+      - "configs/nixfmt.yml"
