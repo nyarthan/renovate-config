@@ -2,5 +2,18 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "nix": {
     "enabled": true
-  }
+  },
+  "packageRules": [
+    {
+      "description": "Disable JavaScript Runtime Updates.",
+      "matchDatasources": ["node-version", "deno"],
+      "enabled": false
+    },
+    {
+      "description": "Disable JavaScript Package Manager Updates.",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["pnpm", "npm", "yarn"],
+      "enabled": false
+    }
+  ]
 }
