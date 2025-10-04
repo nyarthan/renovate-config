@@ -7,7 +7,7 @@
     {
       "description": "Disable JavaScript Runtime Updates.",
       "matchDatasources": ["node-version", "deno"],
-      "enabled": false
+      "enabled": true
     },
     {
       "description": "Disable JavaScript Package Manager Updates.",
