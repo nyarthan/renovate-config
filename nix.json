@@ -21,5 +21,16 @@
       "matchPackageNames": ["@types/node"],
       "versioning": "node"
     }
-  ]
+  ],
+  "customManagers": [{
+    "customType": "jsonata",
+    "fileFormat": "json",
+    "managerFilePatterns": [
+      "/(^|/)package\\.json$/"
+    ],
+    "versioning": "node",
+    "matchStrings": [
+      "($engines := $type(devEngines) = \"array\" ? devEngines : [devEngines]; $node := $engines.runtime[name = \"node\"]; $exists($node) ? { \"currentValue\": $node.version, \"packageName\": \"node\", \"datasource\": \"node-version\" } : undefined)"
+    ]
+  }]
 }
